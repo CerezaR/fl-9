@@ -78,7 +78,7 @@ header .nav ul .link:hover {
 .facts_section .title_of_page {
 	margin-top: 200px;
 	margin-bottom: 200px;
-	font-size: 4.5vw;
+	font-size: 5vw;
 	color: #ddd;
 	text-align: center;
 }
@@ -146,7 +146,7 @@ header .nav ul .link:hover {
 	}
 	
 	.facts_section .title_of_page {
-		font-size: 7vw;
+		font-size: 44px;
 	}
 }
 
@@ -178,7 +178,6 @@ header .nav ul .link:hover {
 	}
 	
 	.facts_section .title_of_page {
-		font-size: 14vw;
 		color: #000;
 		margin: 100px 0 150px 0;
 	}
