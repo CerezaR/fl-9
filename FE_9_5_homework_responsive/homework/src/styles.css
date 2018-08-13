@@ -126,7 +126,7 @@ header .nav ul .link:hover {
 }
 
 @media (max-width: 991px) {	
-	.header .nav ul {
+	header .nav ul {
 		justify-content: center;
 	}
 	
