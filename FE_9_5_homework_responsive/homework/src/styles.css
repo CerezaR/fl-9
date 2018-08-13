@@ -172,7 +172,7 @@ header .nav ul .link:hover {
 		border-bottom: 1px solid #ddd;
 	}
 	
-	header .nav ul .active,
+	header .nav ul .active, 
 	header .nav ul .link:active {
 		font-weight: bold;
 	}
