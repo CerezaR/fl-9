@@ -5,13 +5,13 @@ let output, length_3, perimeter, square;
 
 if (typeof length_1 !== 'number' || typeof length_2 !== 'number' || typeof angle !== 'number') {
 	output = 'Invalid data';
-} else {
+	} else {
 	if (length_1 > 0 && length_2 > 0 && angle > 0) {
 		length_3 = getThirdSide();
 		perimeter = getPerimeter(length_3);
 		square = getSquare(perimeter, length_3);
 		output = result();
-	} else {
+		} else {
 		output = 'Invalid data';
 	}
 }
