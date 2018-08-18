@@ -10,7 +10,6 @@ if (confirm('Do you want to play a game?')) {
 	while (play) {
 		play = false;
 		num = getNumber(range);
-		console.log(num);
 		currentPrize = prize;
 		for (let currentAttempt = 1; currentAttempt <= attempts; currentAttempt++) {
 			usersNum = parseFloat(prompt(result(range, attempts - currentAttempt, prize, currentPrize), ''));
@@ -21,22 +20,22 @@ if (confirm('Do you want to play a game?')) {
           range *= 2;
           play = true;
           break;
-        } else {
+				} else {
 						alert(`Thank you for a game. Your prize is: ${winning}$`);
 						break;
-				}
+					}
 			} else if (currentAttempt < attempts) {
 					currentPrize = Math.floor(currentPrize / 2)
 			} else if (currentAttempt === attempts) {
-					alert(`Thank you for a game. Your prize is: ${winning}$`);
-					if (confirm('Do you want to play again?')) {
-						prize = firstPrize;
-						range = firstRange;
-						winning = 0;
-						play = true;
-						break;
+				alert(`Thank you for a game. Your prize is: ${winning}$`);
+				if (confirm('Do you want to play again?')) {
+					prize = firstPrize;
+					range = firstRange;
+					winning = 0;
+					play = true;
+					break;
 					} else {
-							break;
+						break;
 				}
 			}
 		}
