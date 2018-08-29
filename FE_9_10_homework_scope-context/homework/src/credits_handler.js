@@ -4,10 +4,6 @@ class UserAccount {
     this.cards = [];
   }
   
-  getName() {
-    return this.name;
-  }
-  
   addCard() {
     const amountOfCards = 3;
     if (this.cards.length < amountOfCards) {
@@ -25,17 +21,17 @@ class UserAccount {
 function userCard(index) {
   let balance = 100;
   let transactionLimit = 100;
-  let historyLog = [];
+  let historyLogs = [];
   let key = index;
   
   return {
     getCardOptions() {
-      return { balance, transactionLimit, historyLog, key} ;
+      return { balance, transactionLimit, historyLogs, key} ;
     },
     
     putCredits(credits) {
       balance += credits;
-      historyLog.push({operationType: 'Received credits', credits: credits, operationTime: getCurrentDate()});
+      historyLogs.push({operationType: 'Received credits', credits: credits, operationTime: getCurrentDate()});
     },
     
     takeCredits(credits) {
@@ -45,13 +41,13 @@ function userCard(index) {
         console.log('Transaction limit is lower than credits you want to take.');
       } else {
         balance -= credits;
-        historyLog.push({operationType: 'Withdrawal of credits', credits: credits, operationTime: getCurrentDate()});
+        historyLogs.push({operationType: 'Withdrawal of credits', credits: credits, operationTime: getCurrentDate()});
       }
     },
     
     setTransactionLimit(credits) {
       transactionLimit = credits;
-      historyLog.push({operationType: 'Transaction limit change', credits: credits, operationTime: getCurrentDate()});
+      historyLogs.push({operationType: 'Transaction limit change', credits: credits, operationTime: getCurrentDate()});
     },
     
     transferCredits(credits, card) {
