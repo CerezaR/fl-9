@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  margin: 25px 25px 0px 25%;
+}
+  
+.content {
+  width: 700px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #000;
+}  
+
+.headerOfList {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.inputForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #000;
+  margin: 25px 15px 0 15px;
+}
+
+.taskInput {
+  padding: 2px 5px;
+  margin-left: 20px;
+  width: 87%;
+  border: 1px solid #000;
+  height: 20px;
+  font-size: 12px;
+}
+
+.taskInput::placeholder {
+  color: #bbb;
+}
+
+.addTaskBtn {
+  margin-right: 20px;
+}
+
+.footerOfList {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.footerImg {
+  width: 100px;
+  height: 100px;
+}
+
+.listOfTasks {
+  margin-top: 15px;
+  list-style: none;
+}
+
+.textOfItem {
+  margin-left: 10px;
+}
+
+.itemOfList {
+  display: flex;
+  align-items: center;
+  margin: 0 0 5px 35px;
+}
+
+.itemOfList.over {
+  border-top: 2px solid silver;
+}
+
+.deleteItem {
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.limitMsg {
+  color: red;
+  text-align: center;
+  display: none;
+}
