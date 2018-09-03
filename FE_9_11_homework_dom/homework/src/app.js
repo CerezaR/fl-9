@@ -1,21 +1,21 @@
-const inputField = document.querySelector('.taskInput');
-const addNewItemBtn = document.querySelector('.addTaskBtn');
-const todoList = document.querySelector('.listOfTasks');
+const taskInput = document.querySelector('.taskInput');
+const addTaskBtn = document.querySelector('.addTaskBtn');
+const listOfTasks = document.querySelector('.listOfTasks');
 const limitMsg = document.querySelector('.limitMsg');
 const max_count = 10;
 let draggingElement = null;
 let counter = 1;
 
-inputField.addEventListener('input', function () {
-  addNewItemBtn.disabled = false;
+taskInput.addEventListener('input', function () {
+  addTaskBtn.disabled = false;
 });
 
-addNewItemBtn.addEventListener('click', function () {  
-  let text = inputField.value.trim();
+addTaskBtn.addEventListener('click', function () {  
+  let text = taskInput.value.trim();
   addItemToList(text);
   counter++;
-  addNewItemBtn.disabled = true;
-  inputField.value = ''; 
+  addTaskBtn.disabled = true;
+  taskInput.value = ''; 
 });
 
 function addItemToList(text) {
@@ -32,13 +32,13 @@ function addItemToList(text) {
   list.appendChild(checkboxItem);
   list.appendChild(textItem);
   list.appendChild(deleteBtn);
-  todoList.appendChild(list);
+  listOfTasks.appendChild(list);
   
   deleteBtn.addEventListener('click', function () {
     list.remove();
     counter--;
     if (counter === max_count) {
-      inputField.disabled = false;
+      taskInput.disabled = false;
       limitMsg.style.display = 'none';
     }
   });
@@ -48,8 +48,8 @@ function addItemToList(text) {
   });
   
   if (counter === max_count) {
-    inputField.disabled = true;
-    addNewItemBtn.disabled = true;
+    taskInput.disabled = true;
+    addTaskBtn.disabled = true;
     limitMsg.style.display = 'block';
   }  
   
