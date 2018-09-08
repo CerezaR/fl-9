@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  margin: 25px 25px 25px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerOfList {
+  font-size: 40px;
+}
+
+.addTaskBtn {
+  margin-top: 40px;
+  width: 200px;
+  height: 35px;
+  font-size: 26px;
+  border-radius: 10px;
+}
+
+.btnTask {
+  text-align: center;
+}
+
+.listOfTasks {
+  text-align: center;
+  margin-top: 40px;
+  list-style: none;
+  font-size: 26px;
+}
+
+.listOfTasks:empty + p {
+  display: block;
+}
+
+.addHeader, .modifyHeader {
+  font-size: 40px;
+  text-align: center;
+}
+
+.taskInput, .taskModify {
+  margin-top: 30px; 
+  width: 280px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+#addBtns {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#saveBtn {
+  font-size: 20px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+#cancelBtn {
+  font-size: 20px;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.checked, .unchecked, .remove {
+  width: 35px;
+  height: 35px;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+}
+
+.checked {
+  background-image: url("img/done-s.png");
+}
+
+.unchecked {
+  background-image: url("img/todo-s.png");
+}
+
+.remove {
+  background-image: url("img/remove-s.jpg");
+}
+
+.empty-todo {
+  text-align: center;
+  display: none;
+  font-size: 26px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 80px;
+  margin-bottom: 10px;
+}
+
+.textOfItem {
+  border: none;
+  padding: 0;
+  outline: inherit;
+  background-color: white;
+  cursor: text;
+  font-size: 26px;
+}
